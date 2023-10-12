@@ -1,5 +1,3 @@
-import pytest
-
 """
 CUT: account
 MUT: methods -> constructor (__init__), setter/getter, 
