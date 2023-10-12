@@ -1,0 +1,23 @@
+b'{"symbol":"ETHBTC","price":"0.05788000"}'
+b'{"symbol":"LTCBTC","price":"0.00228100"}'
+b'{"symbol":"BNBBTC","price":"0.00766600"}'
+b'{"symbol":"NEOBTC","price":"0.00025060"}'
+b'{"symbol":"QTUMETH","price":"0.00135500"}'
+b'{"symbol":"EOSETH","price":"0.00034560"}'
+b'{"symbol":"SNTETH","price":"0.00001469"}'
+b'{"symbol":"BNTETH","price":"0.00032970"}'
+b'{"symbol":"BCCBTC","price":"0.07908100"}'
+b'{"symbol":"GASBTC","price":"0.00008370"}'
+elapsed time: 3.43
+
+b'{"symbol":"ETHBTC","price":"0.05777000"}'
+b'{"symbol":"LTCBTC","price":"0.00228100"}'
+b'{"symbol":"BNBBTC","price":"0.00766800"}'
+b'{"symbol":"NEOBTC","price":"0.00025040"}'
+b'{"symbol":"QTUMETH","price":"0.00134500"}'
+b'{"symbol":"EOSETH","price":"0.00034580"}'
+b'{"symbol":"SNTETH","price":"0.00001471"}'
+b'{"symbol":"BNTETH","price":"0.00032940"}'
+b'{"symbol":"BCCBTC","price":"0.07908100"}'
+b'{"symbol":"GASBTC","price":"0.00008370"}'
+elapsed time: 5.64
