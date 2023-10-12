@@ -31,5 +31,3 @@ class Customer:
             if account.iban == iban:
                 return account
         return None
-
-
