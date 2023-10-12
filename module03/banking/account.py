@@ -94,5 +94,3 @@ class CheckingAccount(Account):
                f"status: {self.status.name} ({self.status.value}), " \
                f"overdraft_amount: {self.overdraft_amount}" \
                f"]"
-
-
