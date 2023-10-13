@@ -1,0 +1,25 @@
+db.countries1.find(
+ {
+           $and : [
+                { "population": { $lt: 1000000 } } ,
+                { "surfaceArea": { $gt: 100000 } }
+           ]
+ } ,
+         {
+            "name": true, "population": true, "surfaceArea": true, "_id":false
+         }
+ )
+
+ db.movies1.find(
+{
+ 'year' : {$gte : 1970, $lt: 1980 }
+ },
+ {
+ "title": 1, "year":2 , "_id": 0
+ }
+ ).sort({"year": 1})
+ 
+ db.countries1.find(
+  { name : /^[a-zA-Z]{6}$/},
+  { name: 1 , _id: 0}
+ )
