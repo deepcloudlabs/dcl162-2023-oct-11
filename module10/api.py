@@ -11,7 +11,7 @@ from rest_utility.utils import extract_customer_from_request_body
 crm_rest_api = Flask(__name__)
 crm_rest_api.config["DEBUG"] = True
 cors = CORS(crm_rest_api)
-socketio = SocketIO(crm_rest_api, cors_allowed_oigins="*")
+socketio = SocketIO(crm_rest_api, cors_allowed_origins="*")
 # endregion
 
 # region pymongo configuration
