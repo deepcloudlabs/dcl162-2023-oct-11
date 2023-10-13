@@ -1163,7 +1163,7 @@ tickers = [{"symbol": "ETHBTC", "price": "0.05775000"}, {"symbol": "LTCBTC", "pr
 
 # resiliency patterns: retry, rate limiter, time limiter, bulkhead, circuit breaker
 def get_async_tickers():
-    return (grequests.get(url=f"https://api.binance.com/api/v3/ticker/price?symbol={ticker['symbol']}") for ticker in tickers)
+    return (grequests.get(url=f"https://api.binance.com/api/v3/ticker/price?symbol={ticker['symbol']}") for ticker in tickers[:16])
 
 
 start = time.perf_counter()

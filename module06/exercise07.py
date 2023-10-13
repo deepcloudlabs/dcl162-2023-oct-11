@@ -1,4 +1,6 @@
 import time
+from asyncio import Future
+from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
@@ -1167,11 +1169,19 @@ def get_sync_ticker(symbol: str):
 
 
 def get_all_tickers():
-    for ticker in tickers[:16]:
-        print(get_sync_ticker(ticker["symbol"]).content)
+    ticker_futures: list[Future] = []
+    ticker_prices = []
+    print(f"Number of symbols: {len(tickers)}")
+    with ThreadPoolExecutor(max_workers=256) as tp:
+        start = time.perf_counter()
+        for ticker in tickers:
+            ticker_futures.append(tp.submit(get_sync_ticker, ticker["symbol"]))
+        for future in ticker_futures:
+            ticker_prices.append(future.result().content)
+        elapsed_time = time.perf_counter() - start
+        print(f"elapsed time: {elapsed_time:3.2f}")
+    for price in ticker_prices:
+        print(price)
 
 
-start = time.perf_counter()
 get_all_tickers()
-elapsed_time = time.perf_counter() - start
-print(f"elapsed time: {elapsed_time:3.2f}")
